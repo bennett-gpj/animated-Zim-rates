@@ -221,9 +221,10 @@
 
 
           blackDays.transition().duration(2000)
+          .delay((d,i)=> i*7)
           .attr('width',20)
           .attr('height',20)
-
+        
           .style('fill', function(d) {
             if (d.Change == 'up') { return 'red' }
             if (d.Change == 'down') { return 'green' }
@@ -274,6 +275,7 @@
 
 
           auctionDays.transition().duration(2000)
+          .delay((d,i)=> i*7)
           .attr('width',20)
           .attr('height',20)
           .style('fill',d=> {
